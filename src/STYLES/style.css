@@ -1,0 +1,106 @@
+body {
+  font-family: Raleway, sans-serif;
+  margin: 40px;
+}
+
+h1 {
+  font-family: Vidaloka, serif;
+  font-size: 1rem;
+  font-weight: normal;
+  color: #67C0C8;
+}
+
+wrapper {
+  width: calc(100vw - 120px);
+  height: calc(100vh - 80px);
+  margin-left: 60px;
+  margin-right: 40px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: 
+      ".... header header"
+      "sidebar content content"
+      ".... footer footer";
+  grid-template-rows: 80px 1fr 80px;
+  gap: 10px;
+}
+
+
+.about-obj ul {
+  list-style-type: none;
+  margin: 0
+}
+.about-obj p {
+  margin: 0 0 0 30px;
+}
+
+.item { 
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.header { 
+  position: relative;
+  display: flex;
+  align-items: center;
+  grid-area: header;
+}
+
+.logo {
+  position: absolute;
+  right: 1rem;
+  top: 0;
+  width: 80px;
+  height: 80px;
+}
+
+.logo path {
+  fill: #589EA4;
+}
+
+  .header ul {
+    display: flex;
+    padding-left: 0px;
+  }
+    
+  .header li {
+    font-weight: bold;
+    list-style: none;
+    margin: 0px 20px 0px 0px;
+  }
+
+.content {
+  /* background: linear-gradient(rgba(245, 246, 252, 0), rgba(117, 78, 19, 0.2)), url(../sean-o.jpg) center center no-repeat; */
+  background: linear-gradient(
+    171.19deg, 
+    rgba(180, 60, 60, 0.36) 16.67%, 
+    rgba(180, 60, 60, 0.26) 29.41%, 
+    rgba(255, 255, 255, 0) 42.14%, 
+    rgba(255, 255, 255, 0.12) 53.49%), 
+    url(../sean-o.jpg) center center no-repeat;
+  background-size: cover;
+  grid-area: content;
+  max-height: 80vh;
+  mix-blend-mode: overlay;  
+}
+
+
+.sidebar {
+  grid-area: sidebar;
+}
+
+.footer {
+  grid-area: footer;
+}
+
+.sidetext { 
+  position: fixed;
+  left: -200px;
+  top: 350px;
+  transform: rotate(270deg);
+}
+
+  .sidetext svg {
+    display: inline-block;
+    vertical-align: middle;
+  }
